@@ -90,5 +90,5 @@ class AddSubjectScreen extends StatelessWidget {
         ),
       ),
     );
-  }
+  } 
 }
