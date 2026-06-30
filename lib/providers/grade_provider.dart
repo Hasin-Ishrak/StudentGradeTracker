@@ -1,3 +1,4 @@
+
 import 'package:flutter/foundation.dart';
 import '../models/subject.dart';
 
@@ -9,18 +10,19 @@ class GradeProvider extends ChangeNotifier {
 
   void addSubject(String name, int mark) {
     _subjects.add(Subject(name: name, mark: mark));
-    notifyListeners(); 
+    notifyListeners();
   }
+
   void deleteSubject(Subject subject) {
     _subjects.remove(subject);
-    notifyListeners(); 
+    notifyListeners(); /
   }
 
   int get totalSubjects => _subjects.length;
 
   double get averageMark {
     if (_subjects.isEmpty) return 0;
-    final marks = _subjects.map((s) => s.mark); 
+    final marks = _subjects.map((s) => s.mark);
     final total = marks.reduce((a, b) => a + b);
     return total / _subjects.length;
   }
@@ -28,6 +30,7 @@ class GradeProvider extends ChangeNotifier {
   List<Subject> get passingSubjects {
     return _subjects.where((s) => s.grade != 'F').toList(); 
   }
+  
   String get overallGrade {
     final avg = averageMark;
     if (avg >= 80) return 'A';
