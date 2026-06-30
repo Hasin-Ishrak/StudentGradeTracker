@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'providers/gradeproviders.dart';
-import 'providers/themeprovider.dart';
-import 'theme/apptheme.dart';
-import 'screens/mainshell.dart';
+import 'providers/grade_provider.dart';
+import 'providers/theme_provider.dart';
+import 'screens/main_shell.dart';
+import 'theme/app_themes.dart';
 
 void main() {
   runApp(const MyApp());
